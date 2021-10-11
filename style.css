@@ -4,11 +4,24 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  text-decoration: none;
+  width: auto;
+  height: auto;
 }
 
 body {
   background-color: #eef5f8;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cont {
+  flex: 1 0 auto;
+}
+
+header {
+  background-color: rgb(116, 169, 179);
+  padding: 2 0px;
 }
 
 .vign img {
@@ -20,7 +33,7 @@ body {
   width: 100rem;
 }
 
-header {
-  background-color: rgb(104, 191, 206);
-  padding: 2 0px;
+.footer {
+  flex-shrink: 0;
+  width: 100%;
 }
