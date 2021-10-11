@@ -26,16 +26,15 @@ function createCard(result) {
   result.forEach((teddy) => {
     // Créer une boucle "result" forEach avec pour paramètre teddy
     teddyHtml += `
-      <div id="${teddy._id}" href="Produit.html" class="vign bg-light border-0 card d-flex justify-content-center mt-3 mx-3 align-self-center" style="width: 20rem;">
+      <div id="${teddy._id}" href="Produit.html" class="vign bg-light border-0 mt-3 mx-3 " style="width: 20rem;">
         <img class="vign__img card-img-top pt-3 px-3" src="${teddy.imageUrl}" alt="images nounours">
         <div class="border-0 card-body d-flex flex-row justify-content-between align-items-between text-primary"> 
           <h2 class="card-subtitle">${teddy.name}</h2>
           <p class="card-text font-weight-bold">${teddy.price / 100}€</p>
         </div>
-        <a class="text-center" href="./Produit.html?id=${
-          teddy._id
-        }"><button class="btn btn-primary card-link m-3" style="width: 5srem;">Voir le produit</button></a>
+        <a class="text-center" href="./Produit.html?id=${teddy._id}"><button class="btn btn-primary card-link m-3" style="width: 5srem;">Voir le produit</button></a>
       </div>
+      
     `;
     // Création de la variable "teddyHtml" qui a pour valeur du code html mis entre ``
     console.log(teddy._id);

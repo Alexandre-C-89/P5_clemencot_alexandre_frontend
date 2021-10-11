@@ -23,23 +23,34 @@ panier.forEach(function(product){
       const div = document.createElement("div");
       const clear = document.getElementById("clear");
       div.id = product._id;
-      div.classList.add("bg-light", "border-0", "card", "justify-content-center", "mt-3", "mx-3");
+      //div.classList.add("bg-light", "border-0", "card", "justify-content-center", "mt-3", "mx-3");
       div.style.width = "25rem";
       div.innerHTML =  `
-        <img class="card-img-top pt-3 px-3" style="height: 50%;" src="${result.imageUrl}" alt="${result.name}">
-        <div class="border-0 card-body d-flex flex-column justify-content-around align-items-center text-primary"> 
-          <h2 class="card-subtitle">${result.name}</h2>
-          <p class="card-text mb-0">qty : ${product.qty}</p>
-          <p class="card-text mb-0">color : ${product.color}</p>
-          <p class="card-text font-weight-bold">${result.price / 100 * product.qty}€</p>
-          <input class="btn btn-primary" id="clear" type="reset" value="Supprimer l'article"></input>
+        
+        <div class="card" style="width: 18rem;">
+        <img src="${result.imageUrl}" class="card-img-top" alt="${result.name}">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">${result.name}</h5>
+            <p class="card-text">qty : ${product.qty}</p>
+            <p class="card-text mb-0">color : ${product.color}</p>
+            <p class="card-text font-weight-bold">${result.price / 100 * product.qty}€</p>
+            <input class="btn btn-primary" id="clear" type="reset" value="Supprimer l'article"></input>
+          </div>
         </div>
       `
       containerHtml.appendChild(div);
     })
-
 });
 
+  
+// <img class="card-img-top pt-3 px-3" style="height: 50%;" src="${result.imageUrl}" alt="${result.name}">
+        // <div class="border-0 card-body d-flex flex-column justify-content-around align-items-center text-primary"> 
+        //   <h2 class="card-subtitle">${result.name}</h2>
+        //   <p class="card-text mb-0">qty : ${product.qty}</p>
+        //   <p class="card-text mb-0">color : ${product.color}</p>
+        //   <p class="card-text font-weight-bold">${result.price / 100 * product.qty}€</p>
+        //   <input class="btn btn-primary" id="clear" type="reset" value="Supprimer l'article"></input>
+        // </div>
 // ***********************************************
   
 clear.addEventListener("click", (e) => {
